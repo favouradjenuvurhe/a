@@ -41,7 +41,12 @@ function loadGame() {
             createScreen.style.display = "none";
         }
 
-        console.log("Game loaded from localStorage.");
+        // ✅ Make sure stats bars & game UI are updated
+        if (typeof updateStatsUI === "function") {
+            updateStatsUI(window.stats);
+        }
+
+        console.log("Game loaded from localStorage and resumed.");
     } catch (err) {
         console.error("Failed to load game:", err);
     }
