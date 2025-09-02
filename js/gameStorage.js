@@ -1,6 +1,5 @@
 // gameStorage.js
 
-// Key used in localStorage
 const STORAGE_KEY = "quicklife_save";
 
 // Save game state
@@ -36,6 +35,12 @@ function loadGame() {
         document.getElementById("total-money").innerText = gameState.money || "0 $";
         document.getElementById("text-container").innerHTML = gameState.story || "";
 
+        // ✅ Hide character creation if a saved game exists
+        const createScreen = document.getElementById("create-character-screen");
+        if (createScreen) {
+            createScreen.style.display = "none";
+        }
+
         console.log("Game loaded from localStorage.");
     } catch (err) {
         console.error("Failed to load game:", err);
@@ -57,6 +62,10 @@ window.addEventListener("load", loadGame);
 window.newLife = (function(originalNewLife) {
     return function() {
         clearSave(); // clear storage when starting new life
+        const createScreen = document.getElementById("create-character-screen");
+        if (createScreen) {
+            createScreen.style.display = "block"; // show again for new life
+        }
         if (typeof originalNewLife === "function") {
             originalNewLife();
         }
