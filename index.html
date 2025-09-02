@@ -26,37 +26,37 @@
             <div class="event-body" id="event-body"></div>
         </div>
     </div>
-    <div id="events-container">
-        
-    </div>
+    <div id="events-container"></div>
+
     <nav id="navbar">
         <div id="money-container" onclick="windows.playerData.moneyDashboard()" title="Display flow of money">
             <p id="total-money">0 $</p>
             <p id="balance"></p>
         </div>
     </nav>
+
     <main>
-    <div id="stats-container">
-        <ul id="stats-list">
-            <li>Health: <div class="bar"><div class="bar-progress" id="health-bar"></div></div> </li>
-            <li>Happiness: <div class="bar"><div class="bar-progress" id="happiness-bar"></div></div> </li>
-            <li>Smartness: <div class="bar"><div class="bar-progress" id="smartness-bar"></div></div> </li>
-            <li>Appearance: <div class="bar"><div class="bar-progress" id="appearance-bar"></div></div> </li>
-            <li>Fitness: <div class="bar"><div class="bar-progress" id="fitness-bar"></div></div> </li>
-            <div class="clear"></div>
-        </ul>
-    </div>
+        <div id="stats-container">
+            <ul id="stats-list">
+                <li>Health: <div class="bar"><div class="bar-progress" id="health-bar"></div></div> </li>
+                <li>Happiness: <div class="bar"><div class="bar-progress" id="happiness-bar"></div></div> </li>
+                <li>Smartness: <div class="bar"><div class="bar-progress" id="smartness-bar"></div></div> </li>
+                <li>Appearance: <div class="bar"><div class="bar-progress" id="appearance-bar"></div></div> </li>
+                <li>Fitness: <div class="bar"><div class="bar-progress" id="fitness-bar"></div></div> </li>
+                <div class="clear"></div>
+            </ul>
+        </div>
+
         <div id="tale-container">
             <div id="head-container">
                 Childhood
             </div>
             <div id="text-container"></div>
         </div>
+
         <div id="control-container">
             <div class="row">
-                <div class="button-container" id="left-btn-container">
-                    
-                </div>
+                <div class="button-container" id="left-btn-container"></div>
                 <div class="button-container" id="relationship-container">
                     <button onclick="menu.relationships()" class="btn" id="relation-button"><img src="images/relations.png" alt="relations"></button>
                     <p>Relationships</p>
@@ -82,6 +82,7 @@
             </div>
         </div>
     </main>
+
     <!-- menu -->
     <menu id="menu-template">
         <div class="menu-header">
@@ -91,6 +92,7 @@
         <hr>
         <div id="menu-body"></div>
     </menu>
+
     <div id="death-screen">
         <div id="death-screen-body">
             <h1 id="death-screen-title">You have died!</h1>
@@ -100,15 +102,18 @@
             </div>
         </div>
     </div>
-        <script src="js/items.js"></script>
-        <script src="js/countriesData.js"></script>
-        <script src="js/worldEvents.js"></script>
-        <script src="js/events.js"></script>
-        <script src="js/careers.js"></script>
-        <script src="js/libs.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/characters.js"></script>
-        <script src="js/menu.js"></script>
-        <script src="js/interface.js"></script>
-    </body>
+
+    <!-- scripts -->
+    <script src="js/items.js"></script>
+    <script src="js/countriesData.js"></script>
+    <script src="js/worldEvents.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/careers.js"></script>
+    <script src="js/libs.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/characters.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/interface.js"></script>
+    <script src="js/gameStorage.js"></script> <!-- NEW save/load system -->
+</body>
 </html>
